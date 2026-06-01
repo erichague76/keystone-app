@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keystone</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0033cc" />
+</head>
+<body>
+  <div class="app">
+    <h1>Keystone</h1>
+
+    <section class="card">
+      <h2>Plate</h2>
+      <div class="plate-preview-wrap">
+        <canvas id="plateCanvas" width="500" height="160"></canvas>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row center">
+        <label for="wordInput"><strong>Words you formed / input:</strong></label>
+        <input id="wordInput" type="text" maxlength="40" />
+        <button id="submitBtn">Submit</button>
+        <button id="answerBtn">Answer</button>
+      </div>
+
+      <div class="row center">
+        <button id="randomBtn">Generate Random Plate Letters</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+
+      <div class="row center">
+        <label for="lookupInput"><strong>3-Letter Plate Lookup:</strong></label>
+        <input id="lookupInput" type="text" maxlength="3" />
+        <button id="lookupBtn">Check / Load Plate</button>
+      </div>
+
+      <p id="lookupResult">Enter 3 letters to check whether words can be formed.</p>
+      <p id="summary">Ready.</p>
+      <p id="status">Loading...</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Correct Submitted Words</h2>
+        <ul id="submittedList"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Answer List</h2>
+        <div id="results"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
