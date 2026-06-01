@@ -1,0 +1,9 @@
+{
+  "name": "Keystone",
+  "short_name": "Keystone",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#0033cc",
+  "icons": []
+}
