@@ -27,7 +27,7 @@ h2 {
 }
 
 .card {
-  background: transparent;
+  background: None;
   border-radius: 12px;
   padding: 14px;
   margin-bottom: 14px;
