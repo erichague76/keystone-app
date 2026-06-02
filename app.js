@@ -113,7 +113,7 @@ function renderPlateWithLetters(letters) {
   }
 
   // draw white area
-  const box = { x1: 25, y1: 40, x2: 220, y2: 140 };
+  const box = { x1: 25, y1: 70, x2: 220, y2: 140 };
   ctx.fillStyle = "white";
   ctx.fillRect(box.x1, box.y1, box.x2 - box.x1, box.y2 - box.y1);
 
