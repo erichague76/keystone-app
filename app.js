@@ -33,7 +33,7 @@ function drawPlate(letters) {
     ctx.fillRect(padding, padding, plateW, plateH);
     ctx.strokeRect(padding, padding, plateW, plateH);
 
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "None";
     ctx.fillRect(ERASE_X, ERASE_Y, ERASE_W, ERASE_H);
 
     if (!letters) return;
