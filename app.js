@@ -2,8 +2,8 @@ const canvas = document.getElementById("plateCanvas");
 const ctx = canvas.getContext("2d");
 
 // Canvas size
-canvas.width = 450;
-canvas.height = 180;
+canvas.width = 260;
+canvas.height = 140;
 
 // --- Manual Plate Controls ---
 const ERASE_X = 25;      // left edge of white box
