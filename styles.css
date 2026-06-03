@@ -27,7 +27,7 @@ h2 {
 }
 
 .card {
-  background: None;
+  background: none;
   border-radius: 12px;
   padding: 14px;
   margin-bottom: 14px;
@@ -75,12 +75,14 @@ button:hover {
   overflow-x: auto;
 }
 
+/* ⭐ UPDATED: enforce narrower + taller plate preview */
 #plateCanvas {
+  width: 260px;
+  height: 140px;
   max-width: 100%;
   border-radius: 8px;
   background: transparent;
 }
-
 
 .grid {
   display: grid;
@@ -128,6 +130,7 @@ button:hover {
   margin: 8px 0 0;
 }
 
+/* ⭐ Mobile layout improvements */
 @media (max-width: 760px) {
   .grid {
     grid-template-columns: 1fr;
