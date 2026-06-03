@@ -6,7 +6,7 @@ canvas.width = 450;
 canvas.height = 180;
 
 // --- Manual Plate Controls ---
-const ERASE_X = 140;      // left edge of white box
+const ERASE_X = 100;      // left edge of white box
 const ERASE_Y = 55;       // top edge of white box
 const ERASE_W = 170;      // width of white box
 const ERASE_H = 70;       // height of white box
