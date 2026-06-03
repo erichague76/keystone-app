@@ -1,17 +1,28 @@
 const canvas = document.getElementById("plateCanvas");
 const ctx = canvas.getContext("2d");
 
-// ✅ Adjust size slightly (no big layout change)
-canvas.width = 450;   // slightly narrower (was ~500)
-canvas.height = 180;  // slightly taller (was ~160)
+// Canvas size
+canvas.width = 450;
+canvas.height = 180;
 
-// ✅ Updated draw function
+// --- Manual Plate Controls ---
+const ERASE_X = 140;      // left edge of white box
+const ERASE_Y = 55;       // top edge of white box
+const ERASE_W = 170;      // width of white box
+const ERASE_H = 70;       // height of white box
+
+const LETTER_X = 160;     // starting X for first letter
+const LETTER_Y = 105;     // baseline Y for letters
+const LETTER_SPACING = 55;
+const LETTER_FONT_SIZE = 70;
+
+// --- Updated draw function ---
 function drawPlate(letters) {
-    // Clear properly
+    // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ✅ Fix white overlap by explicitly repainting background
-    ctx.fillStyle = "#f4f6fb"; // or match your page background
+    // Background (prevents ghosting)
+    ctx.fillStyle = "#f4f6fb";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Plate base
@@ -26,20 +37,23 @@ function drawPlate(letters) {
     ctx.fillRect(padding, padding, plateW, plateH);
     ctx.strokeRect(padding, padding, plateW, plateH);
 
-    // ✅ Letters (no overlap / clipping)
-    ctx.fillStyle = "#000";
-    ctx.font = "bold 60px Arial";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
+    // --- White erase box (manual control) ---
+    ctx.fillStyle = "white";
+    ctx.fillRect(ERASE_X, ERASE_Y, ERASE_W, ERASE_H);
 
     if (!letters) return;
 
-    const chars = letters.toUpperCase().slice(0, 3).split("");
-    const spacing = plateW / (chars.length + 1);
+    // --- Letters (manual control) ---
+    ctx.fillStyle = "#000";
+    ctx.font = `bold ${LETTER_FONT_SIZE}px Arial`;
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
 
-    chars.forEach((ch, i) => {
-        const x = padding + spacing * (i + 1);
-        const y = padding + plateH / 2;
-        ctx.fillText(ch, x, y);
-    });
+    const chars = letters.toUpperCase().slice(0, 3).split("");
+
+    let x = LETTER_X;
+    for (let ch of chars) {
+        ctx.fillText(ch, x, LETTER_Y);
+        x += LETTER_SPACING;
+    }
 }
