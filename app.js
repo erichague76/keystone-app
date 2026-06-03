@@ -6,10 +6,10 @@ canvas.width = 450;
 canvas.height = 180;
 
 // --- Manual Plate Controls ---
-const ERASE_X = 140;      // left edge of white box
-const ERASE_Y = 55;       // top edge of white box
-const ERASE_W = 170;      // width of white box
-const ERASE_H = 70;       // height of white box
+const ERASE_X = 25;      // left edge of white box
+const ERASE_Y = 40;       // top edge of white box
+const ERASE_W = 200;      // width of white box
+const ERASE_H = 200;       // height of white box
 
 const LETTER_X = 160;     // starting X for first letter
 const LETTER_Y = 105;     // baseline Y for letters
