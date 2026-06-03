@@ -46,8 +46,8 @@ function drawPlate(letters) {
     // --- Letters (manual control) ---
     ctx.fillStyle = "#000";
     ctx.font = `bold ${LETTER_FONT_SIZE}px Arial`;
-    ctx.textAlign = "left";
-    ctx.textBaseline = "middle";
+    ctx.textAlign = "left";      // IMPORTANT: manual placement
+    ctx.textBaseline = "middle"; // IMPORTANT: vertical alignment
 
     const chars = letters.toUpperCase().slice(0, 3).split("");
 
