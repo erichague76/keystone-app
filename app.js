@@ -6,7 +6,7 @@ canvas.width = 260;
 canvas.height = 160;   // increased so erase box fits
 
 // --- Manual Plate Controls ---
-const ERASE_X = 118;   // left edge of white field
+const ERASE_X = -18;   // left edge of white field
 const ERASE_Y = 108;   // top of letter zone
 const ERASE_W = 365;   // width up to keystone
 const ERASE_H = 205;   // height of letter zone
