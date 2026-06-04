@@ -6,10 +6,13 @@ canvas.width = 260;
 canvas.height = 160;   // increased so erase box fits
 
 // --- Manual Plate Controls ---
-const ERASE_X = 25;
-const ERASE_Y = 35;
-const ERASE_W = 135;
-const ERASE_H = 110;   // now fits inside 160px height
+const ERASE_X = 118;   // left edge of white field
+const ERASE_Y = 108;   // top of letter zone
+const ERASE_W = 365;   // width up to keystone
+const ERASE_H = 205;   // height of letter zone
+
+ctx.fillStyle = "white";
+ctx.fillRect(ERASE_X, ERASE_Y, ERASE_W, ERASE_H);
 
 const LETTER_X = 120;  // moved left so all 3 letters fit
 const LETTER_Y = 105;
