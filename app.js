@@ -2,8 +2,8 @@ const canvas = document.getElementById("plateCanvas");
 const ctx = canvas.getContext("2d");
 
 // Canvas size
-canvas.width = 260;
-canvas.height = 160;   // increased so erase box fits
+canvas.width = 450;
+canvas.height = 260;   // increased so erase box fits
 
 // --- Manual Plate Controls ---
 const ERASE_X = 18;   // left edge of white field
