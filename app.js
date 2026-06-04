@@ -1,27 +1,37 @@
+// ===============================
+// Keystone Plate Renderer (Clean Rewrite)
+// ===============================
+
 const canvas = document.getElementById("plateCanvas");
 const ctx = canvas.getContext("2d");
 
-// Canvas size
+// Final canvas size (mobile‑safe)
 canvas.width = 450;
-canvas.height = 260;   // increased so erase box fits
+canvas.height = 260;
 
-// --- Manual Plate Controls ---
-const ERASE_X = 18;   // left edge of white field
-const ERASE_Y = 108;   // top of letter zone
-const ERASE_W = 365;   // width up to keystone
-const ERASE_H = 205;   // height of letter zone
+// -------------------------------
+// Layout Constants
+// -------------------------------
 
-ctx.fillStyle = "white";
-ctx.fillRect(ERASE_X, ERASE_Y, ERASE_W, ERASE_H);
+// White box (left area) — DOES NOT overlap yellow
+const ERASE_X = 22;
+const ERASE_Y = 40;
+const ERASE_W = 150;
+const ERASE_H = 150;
 
-const LETTER_X = 120;  // moved left so all 3 letters fit
-const LETTER_Y = 105;
+// Letter placement
+const LETTER_X = ERASE_X + 20;   // inside white box
+const LETTER_Y = ERASE_Y + 75;   // vertical center
 const LETTER_SPACING = 45;
 const LETTER_FONT_SIZE = 70;
 
-function drawPlate(letters) {
+// -------------------------------
+// Draw Plate Background
+// -------------------------------
+function drawBasePlate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Plate background
     ctx.fillStyle = "#f4f6fb";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -29,16 +39,22 @@ function drawPlate(letters) {
     const plateW = canvas.width - padding * 2;
     const plateH = canvas.height - padding * 2;
 
+    // White plate area
     ctx.fillStyle = "#ffffff";
     ctx.strokeStyle = "#000";
     ctx.lineWidth = 2;
-
     ctx.fillRect(padding, padding, plateW, plateH);
     ctx.strokeRect(padding, padding, plateW, plateH);
 
-    ctx.fillStyle = "None";
+    // Left white field (no yellow overlap)
+    ctx.fillStyle = "white";
     ctx.fillRect(ERASE_X, ERASE_Y, ERASE_W, ERASE_H);
+}
 
+// -------------------------------
+// Draw Letters
+// -------------------------------
+function drawLetters(letters) {
     if (!letters) return;
 
     ctx.fillStyle = "#000";
@@ -54,3 +70,14 @@ function drawPlate(letters) {
         x += LETTER_SPACING;
     }
 }
+
+// -------------------------------
+// Main Draw Function
+// -------------------------------
+function drawPlate(letters) {
+    drawBasePlate();
+    drawLetters(letters);
+}
+
+// Initial render
+drawPlate("");
