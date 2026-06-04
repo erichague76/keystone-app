@@ -138,3 +138,13 @@ button:hover {
     justify-content: stretch;
   }
 }
+/* --- Mobile Canvas Fix --- */
+canvas {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    aspect-ratio: 450 / 260;
+    display: block;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
