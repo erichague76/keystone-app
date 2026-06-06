@@ -14,10 +14,11 @@ canvas.height = 260;
 // -------------------------------
 
 // White box (left area) — DOES NOT overlap yellow
-const ERASE_X = 22;
-const ERASE_Y = 40;
-const ERASE_W = 150;
-const ERASE_H = 150;
+const ERASE_X = 30;     // left margin
+const ERASE_Y = 60;     // safely below blue band
+const ERASE_W = 150;    // width of left white area
+const ERASE_H = 120;    // stays inside white region
+
 
 // Letter placement
 const LETTER_X = ERASE_X + 20;   // inside white box
@@ -32,8 +33,9 @@ function drawBasePlate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Plate background
-    ctx.fillStyle = "#f4f6fb";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    ctx.fillRect(ERASE_X, ERASE_Y, ERASE_W, ERASE_H);
+);
 
     const padding = 8;
     const plateW = canvas.width - padding * 2;
