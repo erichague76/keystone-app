@@ -71,11 +71,10 @@ button:hover {
 
 /* ⭐ UPDATED: enforce narrower + taller plate preview */
 #plateCanvas {
-  width: 260px;
-  height: 140px;
-  max-width: 100%;
+  width: 500px;
+  height: 250px;
+  background: #e5e7eb;
   border-radius: 8px;
-  background: transparent;
 }
 
 .grid {
