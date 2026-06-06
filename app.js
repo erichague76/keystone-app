@@ -41,16 +41,7 @@ function drawBasePlate() {
     const plateW = canvas.width - padding * 2;
     const plateH = canvas.height - padding * 2;
 
-    // White plate area
-    ctx.fillStyle = "#ffffff";
-    ctx.strokeStyle = "#000";
-    ctx.lineWidth = 2;
-    ctx.fillRect(padding, padding, plateW, plateH);
-    ctx.strokeRect(padding, padding, plateW, plateH);
-
-    // Left white field (no yellow overlap)
-    ctx.fillStyle = "white";
-    ctx.fillRect(ERASE_X, ERASE_Y, ERASE_W, ERASE_H);
+    
 }
 
 // -------------------------------
