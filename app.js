@@ -26,7 +26,7 @@ const LETTER_Y = ERASE_Y + 75;   // vertical center
 const LETTER_SPACING = 45;
 const LETTER_FONT_SIZE = 70;
 
-// -------------------------------
+// -----------------------------------
 // Draw Plate Background
 // -------------------------------
 function drawBasePlate() {
