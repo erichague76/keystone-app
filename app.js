@@ -14,7 +14,7 @@ canvas.height = 260;
 // -------------------------------
 
 // White box (left area) — DOES NOT overlap yellow
-const ERASE_X = -300;     // left margin
+const ERASE_X = 40;     // left margin
 const ERASE_Y = 60;     // safely below blue band
 const ERASE_W = 150;    // width of left white area
 const ERASE_H = 120;    // stays inside white region
