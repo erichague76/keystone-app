@@ -124,7 +124,7 @@ button:hover {
 }
 
 /* ⭐ Mobile layout improvements */
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
   }
