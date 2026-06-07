@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d");
 
 // Final canvas size (mobile‑safe)
 canvas.width = 450;
-canvas.height = 260;
+canvas.height = 450;
 
 // -------------------------------
 // Layout Constants
