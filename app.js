@@ -33,8 +33,7 @@ function drawBasePlate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Plate background
-    ctx.fillStyle = "rgba(255, 255, 255, 0.0)";   // fully transparent
-    ctx.fillRect(ERASE_X, ERASE_Y, ERASE_W, ERASE_H);
+    
 
 
     const padding = 8;
