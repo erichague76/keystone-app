@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d");
 
 // Final canvas size (mobile‑safe)
 canvas.width = 200;
-canvas.height = 450;
+canvas.height = 250;
 
 // -------------------------------
 // Layout Constants
@@ -21,8 +21,8 @@ const ERASE_H = 120;    // stays inside white region
 
 
 // Letter placement
-const LETTER_X = ERASE_X + 20;   // inside white box
-const LETTER_Y = ERASE_Y + 75;   // vertical center
+const LETTER_X = ERASE_X  20;   // inside white box
+const LETTER_Y = ERASE_Y  75;   // vertical center
 const LETTER_SPACING = 45;
 const LETTER_FONT_SIZE = 50;
 
@@ -30,7 +30,7 @@ const LETTER_FONT_SIZE = 50;
 // Draw Plate Background
 // -------------------------------
 function drawBasePlate() {
-    ctx.clearRect(-1, -1, canvas.width, canvas.height);
+    ctx.clearRect(1, 1, canvas.width, canvas.height);
 
     // Plate background
     
