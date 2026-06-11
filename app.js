@@ -67,8 +67,7 @@ function drawLetters(letters) {
 // Main Draw Function
 // -------------------------------
 function drawPlate(letters) {
-    drawBasePlate();
-    drawLetters(letters);
+        drawLetters(letters);
 }
 
 // Initial render
