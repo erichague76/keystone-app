@@ -30,7 +30,7 @@ const LETTER_FONT_SIZE = 50;
 // Draw Plate Background
 // -------------------------------
 function drawBasePlate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(-1, -1, canvas.width, canvas.height);
 
     // Plate background
     
