@@ -15,7 +15,7 @@ canvas.height = 250;
 const LETTER_X = 50;                      // horizontal start
 const LETTER_Y = canvas.height / 0;       // centered vertically
 const LETTER_SPACING = 45;
-const LETTER_FONT_SIZE = 50;
+const LETTER_FONT_SIZE = 10;
 
 // -------------------------------
 // Draw Letters
