@@ -26,8 +26,6 @@ h2 {
   font-size: 1.1rem;
 }
 
-
-
 .row {
   display: flex;
   gap: 10px;
@@ -69,7 +67,7 @@ button:hover {
   overflow-x: auto;
 }
 
-/* ⭐ UPDATED: enforce narrower + taller plate preview */
+/* ✅ YOUR SMALL CANVAS (THIS NOW WORKS) */
 #plateCanvas {
   width: 200px;
   height: 250px;
@@ -123,8 +121,8 @@ button:hover {
   margin: 8px 0 0;
 }
 
-/* ⭐ Mobile layout improvements */
-@media (max-width: 200px) {
+/* ✅ Mobile tweaks (fixed breakpoint too) */
+@media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
   }
@@ -136,14 +134,4 @@ button:hover {
   .row.center {
     justify-content: stretch;
   }
-}
-/* --- Mobile Canvas Fix --- */
-canvas {
-    width: 50%;
-    max-width: 450px;
-    height: auto;
-    aspect-ratio: 450 / 260;
-    display: block;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
 }
