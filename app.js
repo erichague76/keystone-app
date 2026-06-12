@@ -42,7 +42,8 @@ function drawLetters(letters) {
 // -------------------------------
 function drawPlate(letters) {
     // Clear canvas before drawing
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
 
     drawLetters(letters);
 }
