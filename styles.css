@@ -15,7 +15,7 @@ h1 {
   margin: 12px 0;
 }
 
-/* ✅ ONLY style appearance — do NOT resize canvas */
+/* Only style appearance — do NOT resize canvas */
 #plateCanvas {
   display: block;
   margin: 0 auto;
