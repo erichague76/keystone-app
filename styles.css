@@ -69,8 +69,7 @@ button:hover {
 
 /* ✅ YOUR SMALL CANVAS (THIS NOW WORKS) */
 #plateCanvas {
-  width: 200px;
-  height: 250px;
+  display: block;
   background: #e5e7eb;
   border-radius: 8px;
 }
