@@ -1,9 +1,7 @@
-
-82 lines (67 loc) · 2.02 KB
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale= 1">
+    <meta name="viewport" content="width=device-width, initial-scale=.75">
     <meta charset="UTF-8">
     <title>Keystone</title>
     <link rel="stylesheet" href="style.css">
@@ -14,54 +12,71 @@
 <h1>Keystone</h1>
 
 <!-- Plate Preview -->
-<canvas id="plateCanvas" width="200" height="250"></canvas>
+<canvas id="plateCanvas" width="700" height="220" style="border:1px solid #ccc;"></canvas>
+
 <div style="margin-top:8px;"
   <span id="currentLetters">---</span>
 </div>
-    <section class="card">
-      <div class="plate-preview-wrap">
-        <!-- UPDATED: narrower + taller canvas -->
-        <canvas id="plateCanvas" width="300" height="300"></canvas>
-      </div>
-    </section>
 
-    <section class="card">
-      <div class="row center">
-        <label for="wordInput"><strong>Words you formed / input:</strong></label>
-        <input id="wordInput" type="text" maxlength="40" />
-        <button id="submitBtn">Submit</button>
-        <button id="answerBtn">Answer</button>
-      </div>
+<!-- Word Input -->
+<div style="
+    margin-top:20px;
+    padding:12px;
+    border:3px solid #0033cc;
+    border-radius:10px;
+    display:inline-block;
+">
+    <label><b>Words you formed / input:</b></label><br>
+    <input id="wordInput" type="text" style="width:200px; font-size:20px;">
+    <button onclick="submitWord()">Submit</button>
+    <button onclick="showAnswers()">Answer</button>
+</div>
 
-      <div class="row center">
-        <button id="randomBtn">Generate</button>
-        <button id="clearBtn">Clear</button>
-      </div>
+<!-- Random Plate -->
+<div style="margin-top:10px;">
+    <button onclick="loadPlateLetters(generateRandomLetters())">
+        Generate Random Plate Letters
+    </button>
+</div>
 
-      <div class="row center">
-        <label for="lookupInput"><strong>3-Letter Plate Lookup:</strong></label>
-        <input id="lookupInput" type="text" maxlength="3" />
-        <button id="lookupBtn">Check / Load Plate</button>
-      </div>
+<!-- Lookup -->
+<div style="margin-top:20px;">
+    <label><b>3-Letter Plate Lookup:</b></label>
+    <input id="lookupInput" type="text" style="width:80px;">
+    <button onclick="lookupPlate()">Check / Load Plate</button>
+</div>
 
-      <p id="lookupResult">Enter 3 letters to check whether words can be formed.</p>
-      <p id="summary">Ready.</p>
-      <p id="status">Loading...</p>
-    </section>
+<!-- Summary -->
+<div id="summary" style="margin-top:15px; font-size:14px; color:#333;">
+    Ready.
+</div>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Correct Submitted Words</h2>
-        <ul id="submittedList"></ul>
-      </div>
+<!-- Layout -->
+<div style="display:flex; margin-top:20px; gap:20px;">
 
-      <div class="card">
-        <h2>Answer List</h2>
-        <div id="results"></div>
-      </div>
-    </section>
-  </div>
+    <!-- Submitted Words -->
+    <div style="width:200px;">
+        <h3>Correct Submitted Words</h3>
+        <ul id="submittedList"
+            style="height:300px; overflow-y:auto; border:1px solid #ccc; padding:5px;">
+        </ul>
+    </div>
 
-  <script src="app.js"></script>
+    <!-- Results -->
+    <div style="flex:1;">
+        <h3>Answer List</h3>
+        <div id="results"
+             style="white-space:pre; border:1px solid #ccc; padding:10px;
+                    height:300px; overflow:auto;">
+        </div>
+    </div>
+
+</div>
+
+<!-- Status -->
+<div id="status" style="margin-top:20px; font-size:12px; color:#555;"></div>
+
+<script src="app.js"></script>
+
 </body>
 </html>
